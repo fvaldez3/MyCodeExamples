@@ -55,7 +55,7 @@ namespace Sabio.Services
                 singleRecordMapper: delegate (IDataReader reader, short set)
                 {
                     int index = 0;
-                    Location newFriend = MapSingleLocation(reader, ref index);
+                    Location aLocation = MapSingleLocation(reader, ref index);
 
                     if (totalCount == 0)
                     {
@@ -67,7 +67,7 @@ namespace Sabio.Services
                         results = new List<Location>();
                     }
 
-                    results.Add(newFriend);
+                    results.Add(aLocation);
                 });
 
             if (results != null)
@@ -95,7 +95,7 @@ namespace Sabio.Services
                 singleRecordMapper: delegate (IDataReader reader, short set)
                 {
                     int index = 0;
-                    Location newFriend = MapSingleLocation(reader, ref index);
+                    Location aLocation = MapSingleLocation(reader, ref index);
 
                     if (totalCount == 0)
                     {
@@ -107,7 +107,7 @@ namespace Sabio.Services
                         results = new List<Location>();
                     }
 
-                    results.Add(newFriend);
+                    results.Add(aLocation);
                 });
 
             if (results != null)

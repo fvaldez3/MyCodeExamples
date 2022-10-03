@@ -33,7 +33,7 @@ namespace Sabio.Web.Api.Controllers
         [HttpGet("{id:int}")]
         public ActionResult<ItemResponse<LicenseExtended>> GetById(int id)
         {
-            int iCode = 200;
+            int code = 200;
             BaseResponse response = null;
 
             try
@@ -42,7 +42,7 @@ namespace Sabio.Web.Api.Controllers
 
                 if (license == null)
                 {
-                    iCode = 404;
+                    code = 404;
                     response = new ErrorResponse("Application Resource not found.");
 
                 }
@@ -53,13 +53,13 @@ namespace Sabio.Web.Api.Controllers
             }
             catch (Exception ex)
             {
-                iCode = 500;
+                code = 500;
                 base.Logger.LogError(ex.ToString());
                 response = new ErrorResponse(ex.Message);
 
             }
 
-            return StatusCode(iCode, response);
+            return StatusCode(code, response);
         }
 
         [HttpGet("paginate")]
@@ -391,7 +391,7 @@ namespace Sabio.Web.Api.Controllers
         [HttpGet("related/{id:int}")]
         public ActionResult<ItemResponse<License>> GetRelated(int id)
         {
-            int iCode = 200;
+            int code = 200;
             BaseResponse response = null;
 
             try
@@ -400,7 +400,7 @@ namespace Sabio.Web.Api.Controllers
 
                 if (license == null)
                 {
-                    iCode = 404;
+                    code = 404;
                     response = new ErrorResponse("Application Resource not found.");
 
                 }
@@ -411,13 +411,13 @@ namespace Sabio.Web.Api.Controllers
             }
             catch (Exception ex)
             {
-                iCode = 500;
+                code = 500;
                 base.Logger.LogError(ex.ToString());
                 response = new ErrorResponse(ex.Message);
 
             }
 
-            return StatusCode(iCode, response);
+            return StatusCode(code, response);
         }
 
         [HttpGet("state")]
