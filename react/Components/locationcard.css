@@ -1,0 +1,19 @@
+.location-address{
+    margin-bottom: 0rem;
+}
+
+.location-address-container{
+    height: 125px;
+}
+
+.location-button-container{
+    height:125px;
+    width:210px;
+    padding-top:24px;
+}
+
+.location-card{
+    height: 250px;
+    width: 275px;
+    margin: 10px;
+} 
